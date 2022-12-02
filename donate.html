@@ -4,8 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon" />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
+
+    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Document</title>
+
+    <title>Support Us</title>
   </head>
   <body>
     <section class="home" id="home">
@@ -25,24 +44,47 @@
               <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a href="index.html#home" class="nav__link active-link"
+                    <a
+                      href="index.html#home"
+                      class="nav__link active-link"
+                      data-lang="home"
                       >Home</a
                     >
                   </li>
                   <li class="nav__item">
-                    <a href="index.html#about" class="nav__link">About</a>
+                    <a
+                      href="index.html#about"
+                      data-lang="about"
+                      class="nav__link"
+                      >About</a
+                    >
                   </li>
                   <li class="nav__item">
-                    <a href="index.html#Benefits" class="nav__link">Benefits</a>
+                    <a
+                      href="index.html#Benefits"
+                      data-lang="Benfits"
+                      class="nav__link"
+                      >Benefits</a
+                    >
                   </li>
                   <li class="nav__item">
-                    <a href="index.html#faqs" class="nav__link">FAQs</a>
+                    <a href="index.html#faqs" data-lang="faqs" class="nav__link"
+                      >FAQs</a
+                    >
                   </li>
                   <li class="nav__item">
-                    <a href="index.html#contact" class="nav__link"
+                    <a
+                      href="index.html#contact"
+                      class="nav__link"
+                      data-lang="contact"
                       >Contact Us</a
                     >
                   </li>
+                  <ul class="langDiv">
+                    <span style="cursor: pointer; " id="langEn" data-type="en" class="active">en</span>
+                    <span style="cursor: pointer; " id="langAr"data-type="ar">ar</span>
+                    <span style="cursor: pointer; " id="langFa"data-type="fa">fa</span>
+                  </ul>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -61,20 +103,26 @@
             </nav>
           </header>
 
-          <h1 class="home__title">Why we need ur donations ?</h1>
-          <p class="home__description">
+          <h1 class="home__title" data-lang="titleSupport">
+            Why we need ur donations ?
+          </h1>
+          <p data-lang="supportDesc1" class="home__description">
             Help us develop The community and provide better range of benefits
             such as high security for Our websites , and to cover the community
             fees and to come up with other activities
           </p>
-          <a href="#" class="button button--flex"> To Donate </a>
-          <p class="home__description" style="margin-top: 70px">
-            Help us develop The community and provide better range of benefits
-            such as high security for Our websites , and to cover the community
-            fees and to come up with other activities
-          </p>
+          <a data-lang="supportBtn" href="#" class="button button--flex">
+            To Support
+          </a>
         </div>
       </div>
     </section>
+
+    <p class="footer__copy">&#169; High Quality people</p>
+
+    <!-- ============== lang js ============ == -->
+    <script src="lang.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

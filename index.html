@@ -36,21 +36,33 @@
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li class="nav__item">
+            <li class="nav__item" data-lang="home">
               <a href="#home" class="nav__link active-link">Home</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item" data-lang="about">
               <a href="#about" class="nav__link">About</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item" data-lang="Benfits">
               <a href="#Benefits" class="nav__link">Benefits</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item" data-lang="faqs">
               <a href="#faqs" class="nav__link">FAQs</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item" data-lang="contact">
               <a href="#contact" class="nav__link">Contact Us</a>
             </li>
+            <!-- lang -->
+            <ul class="langDiv">
+              <span
+                style="cursor: pointer"
+                id="langEn"
+                data-type="en"
+                class="active"
+                >en</span
+              >
+              <span style="cursor: pointer" id="langAr" data-type="ar">ar</span>
+              <span style="cursor: pointer" id="langFa" data-type="fa">fa</span>
+            </ul>
           </ul>
 
           <div class="nav__close" id="nav-close">
@@ -76,8 +88,10 @@
           <img src="assets/img/home.png" alt="" class="home__img" />
 
           <div class="home__data">
-            <h1 class="home__title">About The community ?</h1>
-            <p class="home__description">
+            <h1 class="home__title" data-lang="title1">
+              About The community ?
+            </h1>
+            <p class="home__description" data-lang="desc1">
               The community (high quality people ) is a leading Moroccan non
               profit association, we are a passionate high school students . The
               community is looking for brilliant students/men or women engaged
@@ -87,13 +101,15 @@
               fulfilled lives lead to understanding , mutual respect and a more
               peaceful ,productive community .
             </p>
-            <a href="#about" class="button button--flex">
+            <a href="#about" class="button button--flex" data-lang="Explore">
               Explore <i class="ri-arrow-right-down-line button__icon"></i>
             </a>
           </div>
 
           <div class="home__social">
-            <span class="home__social-follow">Follow Us</span>
+            <span class="home__social-follow" data-lang="Follow Us"
+              >Follow Us</span
+            >
 
             <div class="home__social-links">
               <a href="" target="_blank" class="home__social-link">
@@ -116,12 +132,12 @@
           <img src="assets/img/about.png" alt="" class="about__img" />
 
           <div class="about__data">
-            <h2 class="section__title about__title">
+            <h2 class="section__title about__title" data-lang="title2">
               The community <br />
               from whm?
             </h2>
 
-            <p class="about__description">
+            <p class="about__description" data-lang="desc2">
               The community is for passionate and hard working ,productive and
               skilled people or people that have different ideas witch they see
               can change or help the society all kind of people : students ,
@@ -135,7 +151,7 @@
       <!--==================== STEPS ====================-->
       <section class="steps section container">
         <div class="steps__bg">
-          <h2 class="section__title-center steps__title">
+          <h2 class="section__title-center steps__title" data-lang="goals">
             Goals of the community :
           </h2>
 
@@ -144,7 +160,7 @@
               <div id="steps__card-icon">
                 <i class="fa-solid fa-brain" id="first"></i>
               </div>
-              <p class="steps__card-description">
+              <p class="steps__card-description" data-lang="step1">
                 1 - we are looking for knowledgeable and wise people to interact
                 and participate
               </p>
@@ -154,7 +170,7 @@
               <div id="steps__card-icon">
                 <i class="fa-solid fa-lightbulb" id="sec"></i>
               </div>
-              <p class="steps__card-description">
+              <p class="steps__card-description" data-lang="step2">
                 2 -sharing ideas ( whatever The ideas are only we believe that
                 we have ideas ) ; at any domaine
                 (Trading-sports-marketing-editingmodeling-cycling-reading books
@@ -166,7 +182,7 @@
               <div id="steps__card-icon">
                 <i class="fa-solid fa-user-group" id="third"></i>
               </div>
-              <p class="steps__card-description">
+              <p class="steps__card-description" data-lang="step3">
                 3 - building successful relationships with the participants
                 which is crucial
               </p>
@@ -175,7 +191,7 @@
               <div id="steps__card-icon">
                 <i class="fa-solid fa-handshake-angle" id="fourth"></i>
               </div>
-              <p class="steps__card-description">
+              <p class="steps__card-description" data-lang="step4">
                 4 - helping the participants
               </p>
             </div>
@@ -184,7 +200,7 @@
               <div id="steps__card-icon">
                 <i class="fa-solid fa-comment-medical"></i>
               </div>
-              <p class="steps__card-description">
+              <p class="steps__card-description" data-lang="step5">
                 5- seeking for people’s advice and their expertises as well .
               </p>
             </div>
@@ -192,7 +208,7 @@
               <div id="steps__card-icon">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
-              <p class="steps__card-description">
+              <p class="steps__card-description" data-lang="step6">
                 6 - finding people whom their English level is low we can help
                 them .
               </p>
@@ -208,13 +224,13 @@
           <img src="assets/img/Benefits.png" alt="" class="about__img" />
 
           <div class="about__data">
-            <h2 class="section__title about__title">
+            <h2 class="section__title about__title" data-lang="title3">
               How can the <br />
               community help you?
             </h2>
             <br />
             <br />
-            <p class="about__description">
+            <p class="about__description" data-lang="desc3">
               1. we will provide an inspired space of work where you can be
               motivated in <br />
               <br />
@@ -235,7 +251,9 @@
       <!--==================== QUESTIONS ====================-->
 
       <section class="questions section" id="faqs">
-        <h2 class="section__title-center questions__title container">
+        <h2
+          class="section__title-center questions__title container"
+          data-lang="questions">
           Some common questions <br />
           were often asked
         </h2>
@@ -245,13 +263,13 @@
             <div class="questions__item">
               <header class="questions__header">
                 <i class="ri-add-line questions__icon"></i>
-                <h3 class="questions__item-title">
+                <h3 class="questions__item-title" data-lang="question1">
                   How can I apply for the community and become a member ?
                 </h3>
               </header>
 
               <div class="questions__content">
-                <p class="questions__description">
+                <p class="questions__description" data-lang="question=>1">
                   you can apply for it by filling the application out in this
                   website
                 </p>
@@ -261,13 +279,13 @@
             <div class="questions__item">
               <header class="questions__header">
                 <i class="ri-add-line questions__icon"></i>
-                <h3 class="questions__item-title">
+                <h3 class="questions__item-title" data-lang="question2">
                   I have an idea of developing the community how can I send it?
                 </h3>
               </header>
 
               <div class="questions__content">
-                <p class="questions__description">
+                <p class="questions__description" data-lang="question=>2">
                   All thanks and appreciation for your keenness to make the
                   application more useful to you and the rest of the people
                 </p>
@@ -277,13 +295,13 @@
             <div class="questions__item">
               <header class="questions__header">
                 <i class="ri-add-line questions__icon"></i>
-                <h3 class="questions__item-title">
+                <h3 class="questions__item-title" data-lang="question3">
                   How do we benifit from this community?
                 </h3>
               </header>
 
               <div class="questions__content">
-                <p class="questions__description">
+                <p class="questions__description" data-lang="question=>3">
                   We don't benefit its a non profit community
                 </p>
               </div>
@@ -294,13 +312,13 @@
             <div class="questions__item">
               <header class="questions__header">
                 <i class="ri-add-line questions__icon"></i>
-                <h3 class="questions__item-title">
+                <h3 class="questions__item-title" data-lang="question4">
                   Is this community for all kind of people?
                 </h3>
               </header>
 
               <div class="questions__content">
-                <p class="questions__description">
+                <p class="questions__description" data-lang="question=>4">
                   Yes, for all kind of people Men or women or students
                 </p>
               </div>
@@ -309,13 +327,13 @@
             <div class="questions__item">
               <header class="questions__header">
                 <i class="ri-add-line questions__icon"></i>
-                <h3 class="questions__item-title">
+                <h3 class="questions__item-title" data-lang="question5">
                   What the community aims for?
                 </h3>
               </header>
 
               <div class="questions__content">
-                <p class="questions__description">
+                <p class="questions__description" data-lang="question=>5">
                   Its first aim is to build wise and brilliant people
                 </p>
               </div>
@@ -324,13 +342,13 @@
             <div class="questions__item">
               <header class="questions__header">
                 <i class="ri-add-line questions__icon"></i>
-                <h3 class="questions__item-title">
+                <h3 class="questions__item-title" data-lang="question6">
                   Where do our donations go?
                 </h3>
               </header>
 
               <div class="questions__content">
-                <p class="questions__description">
+                <p class="questions__description" data-lang="question=>6">
                   All your charitable donations go for the community to cover
                   its fees.
                 </p>
@@ -340,90 +358,116 @@
         </div>
       </section>
       <!-- ==================teams====================== -->
-      <h1 id="titleTeam" class="section__title-center questions__title container">The technical team</h1>
+      <h1
+        id="titleTeam"
+        class="section__title-center questions__title container"
+        data-lang="teamsTitle">
+        The technical team
+      </h1>
       <div class="teamBox">
         <div class="box">
           <div class="divPhoto">
-            <img class="img" src="assets\img_team\yassin.png" alt=" anas chab" />
+            <img class="img" src="assets\img_team\yassin.png" alt=" Yassin" />
           </div>
           <div class="divName">
-            <h3 class="Name">Yassin Ait Elhardouf</h3>
+            <h3 class="Name" data-lang="YassinName">Yassin Ait Elhardouf</h3>
           </div>
           <div class="jobName">
-            <h5>web Devolpper</h5>
+            <h5 data-lang="domainTitle">Web Devolpper</h5>
           </div>
           <div class="divP">
-            <p>
-              Programmer of HQP community and one of the members of this site and holds certificates in the field of programming
+            <p data-lang="yassinDesc">
+              Programmer of HQP community and one of the members of this site
+              and holds certificates in the field of programming
             </p>
           </div>
-          <div class="contactMe">
-          <button>Contact ME</button>
-          </div>
+          <a href="https://wa.link/4wc7rd" target="_blank">
+            <div class="contactMe">
+              <button data-lang="btn">Contact ME</button>
+            </div>
+          </a>
         </div>
 
         <div class="box">
           <div class="divPhoto">
-            <img class="img" src=".\assets\img_team\anas.png" alt=" anas chab" />
+            <img
+              class="img"
+              src=".\assets\img_team\anas.png"
+              alt=" anas chab" />
           </div>
           <div class="divName">
-            <h3 class="Name">anas chaabi</h3>
+            <h3 class="Name" data-lang="anasName">anas chaabi</h3>
           </div>
           <div class="jobName">
-            <h5>marketer</h5>
+            <h5 data-lang="domainTitle2">Marketer</h5>
           </div>
           <div class="divP">
-            <p>
+            <p data-lang="anasDesc">
               one of the Volunteers and managers of this community I'm
               specialized in Marketing, Ads designe, and co_developper obtained
               a marketing certificate in Marketing
             </p>
           </div>
-          <div class="contactMe">
-            <button>Contact ME</button>
+          <a href="https://wa.link/95n4qd" target="_blank">
+            <div class="contactMe">
+              <button data-lang="btn">Contact ME</button>
             </div>
+          </a>
+        </div>
+        <div class="box" id="box">
+          <div class="divPhoto">
+            <img
+              class="img"
+              src="assets\img_team\youssef.png"
+              alt=" anas chab" />
+          </div>
+
+          <div class="divName">
+            <h3 class="Name" data-lang="youssefName">Youssef Allali</h3>
+          </div>
+          <div class="jobName">
+            <h5 data-lang="domainTitle3">App Devolpper</h5>
+          </div>
+          <div class="divP">
+            <p data-lang="youssefDesc">
+              member of HQP community، skills: 1 year experience in front-end
+              developing also an expert in app developing
+            </p>
+          </div>
+          <a href="https://wa.link/i2mwhi" target="_blank">
+            <div class="contactMe">
+              <button data-lang="btn">Contact ME</button>
+            </div>
+          </a>
         </div>
         <div class="box">
           <div class="divPhoto">
-            <img class="img" src="assets\img_team\member.png" alt=" anas chab" />
+            <img
+              class="img"
+              id="photoErrazy"
+              src="assets\img_team\yassin1.png"
+              alt=" anas chab" />
           </div>
-        
+
           <div class="divName">
-            <h3 class="Name">anas chaabi</h3>
+            <h3 class="Name" data-lang="errazyName">Yassine errazy</h3>
           </div>
           <div class="jobName">
-            <h5>marketer</h5>
+            <h5 data-lang="domainTitle">web Devolpper</h5>
           </div>
           <div class="divP">
-            <p>
-              one of the Volunteers and managers of this community I'm
-              specialized in Marketing, Ads designe, and co_developper obtained
-              a marketing certificate in Marketing
+            <p data-lang="errazyDesc">
+              an associate member of the volunteers and the managers of HQP
+              community, obtained a certificate in the front-end developer and
+              specialized in many fields like the Co-designer, Ui
+              designer and others
             </p>
           </div>
-          <div class="contactMe">
-            <button>Contact ME</button>
+          <a href="https://wa.link/vjllad" target="_blank">
+            <div class="contactMe">
+              <button data-lang="btn">Contact ME</button>
             </div>
-        </div>
-        <div class="box">
-          <div class="divPhoto">
-            <img class="img" src="assets\img_team\yassin2.png" alt=" anas chab" />
-          </div>
-          
-          <div class="divName">
-            <h3 class="Name">Yassine errazy</h3>
-          </div>
-          <div class="jobName">
-            <h5>web Devolpper</h5>
-          </div>
-          <div class="divP">
-            <p>
-              an associate member of the volunteers and the managers of HQP community, obtained a certificate in the front-end developer and specialized in many fields like the Co-designer, Ui designer and others
-            </p>
-          </div>
-          <div class="contactMe">
-            <button>Contact ME</button>
-            </div>
+          </a>
         </div>
       </div>
 
@@ -431,7 +475,7 @@
       <section class="contact section container" id="contact">
         <div class="contact__container grid">
           <div class="contact__box">
-            <h2 class="section__title">
+            <h2 class="section__title" data-lang="ContactUs">
               Contact Us <br />
               <span style="color: red; font-size: 20px"
                 >Don't forget to Donate Us</span
@@ -440,7 +484,9 @@
 
             <div class="contact__data">
               <div class="contact__information">
-                <h3 class="contact__subtitle">Our Whatssup</h3>
+                <h3 class="contact__subtitle" data-lang="whatssap">
+                  Our Whatssup
+                </h3>
                 <span class="contact__description">
                   <i class="ri-phone-line contact__icon"></i>
                   +212 762611260
@@ -448,7 +494,9 @@
               </div>
 
               <div class="contact__information">
-                <h3 class="contact__subtitle">Write us by mail</h3>
+                <h3 class="contact__subtitle" data-lang="email">
+                  Write us by mail
+                </h3>
                 <span class="contact__description">
                   <i class="ri-mail-line contact__icon"></i>
                   highQP00@email.com
@@ -464,6 +512,7 @@
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSccOgE16xDZvGUqAos3OaGc5RxYEXYfJ3xAi8scvTByscVaKA/viewform"
                 class="button"
+                data-lang="FillForm"
                 >Fill in the Form
               </a>
             </button>
@@ -481,7 +530,7 @@
           </a>
         </div>
         <div class="footer__content">
-          <h3 class="footer__title">Contact Us</h3>
+          <h3 class="footer__title" data-lang="ContactUs">Contact Us</h3>
 
           <ul class="footer__data">
             <li class="footer__information">+212 762611260</li>
@@ -497,16 +546,16 @@
                 <i class="ri-telegram-fill"></i>
               </a>
             </div>
-            <button
-              class="button button--flex"
-              style="margin-top: -100px; margin-left: 200px">
-              <a href="donate.html" class="button"> Donate Us </a>
+            <button class="button button--flex">
+              <a href="donate.html" class="button" data-lang="support">
+                support Us
+              </a>
             </button>
           </ul>
         </div>
       </div>
 
-      <p class="footer__copy">&#169; errazysn. High Quality people</p>
+      <p class="footer__copy">&#169; High Quality people</p>
     </footer>
 
     <!--=============== SCROLL UP ===============-->
@@ -516,6 +565,8 @@
 
     <!--=============== SCROLL REVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- ============== lang js ============ == -->
+    <script src="lang.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
   </body>
