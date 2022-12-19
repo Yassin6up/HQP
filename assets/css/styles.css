@@ -370,12 +370,12 @@ nav a img {
   right: -45%;
   top: 50%;
 }
-.ri-telegram-fill:hover {
-  color: aqua;
+.ri-whatsapp-fill:hover {
+  color: rgb(72, 247, 37);
   transform: scale(1.1);
 }
-.ri-facebook-fill:hover {
-  color: rgb(55, 75, 255);
+.ri-discord-fill:hover {
+  color: rgb(26, 123, 189);
   transform: scale(1.1);
 }
 .ri-instagram-line:hover {

@@ -153,3 +153,4 @@ sr.reveal(`.about__data, .contact__form`, { origin: "right" });
 sr.reveal(`.steps__card, .product__card, .questions__group, .footer`, {
   interval: 100,
 });
+

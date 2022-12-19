@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon" />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+    <title>HQP</title>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      #accountPyment{
+        
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header{
+        box-shadow: 0 0 10px black;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    <!-- Set up a container element for the button -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img src="../../assets/img/logo.png" alt="" />
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" data-lang="home">
+              <a href="../../#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item" data-lang="about">
+              <a href="../../#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item" data-lang="Benfits">
+              <a href="../../#Benefits" class="nav__link">Benefits</a>
+            </li>
+            <li class="nav__item" data-lang="faqs">
+              <a href="../../#faqs" class="nav__link">FAQs</a>
+            </li>
+            <li class="nav__item" data-lang="contact">
+              <a href="../../#contact" class="nav__link">Contact Us</a>
+            </li>
+           
+          </ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="accountPyment">
+    <div id="paypal-button-container"></div>
+  </div>
+    <script>
+      paypal
+        .Buttons({
+          // Sets up the transaction when a payment button is clicked
+          createOrder: function (data, actions) {
+            return fetch("/api/orders", {
+              method: "post",
+              // use the "body" param to optionally pass additional order information
+              // like product ids or amount
+            })
+              .then((response) => response.json())
+              .then((order) => order.id);
+          },
+          // Finalize the transaction after payer approval
+          onApprove: function (data, actions) {
+            return fetch(`/api/orders/${data.orderID}/capture`, {
+              method: "post",
+            })
+              .then((response) => response.json())
+              .then((orderData) => {
+                // Successful capture! For dev/demo purposes:
+                console.log(
+                  "Capture result",
+                  orderData,
+                  JSON.stringify(orderData, null, 2)
+                );
+                var transaction =
+                  orderData.purchase_units[0].payments.captures[0];
+                alert(
+                  "Transaction " +
+                    transaction.status +
+                    ": " +
+                    transaction.id +
+                    "\n\nSee console for all available details"
+                );
+                // When ready to go live, remove the alert and show a success message within this page. For example:
+                // var element = document.getElementById('paypal-button-container');
+                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                // Or go to another URL:  actions.redirect('thank_you.html');
+              });
+          },
+        })
+        .render("#paypal-button-container");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+    VANTA.GLOBE({
+      el: "#accountPyment",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x5d69ff,
+      backgroundColor: 0xffffff
+    })
+    </script>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
